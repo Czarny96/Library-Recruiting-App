@@ -1,0 +1,7 @@
+<h1 id="tableLabel">Books Details</h1>
+<span class="description">Id:</span><span>{{ books.id }}</span><br />
+<span class="description">Title:</span><input type="text" [(ngModel)]="bookTitle"/><br />
+<span class="description">ISBN number:</span><input type="number" [(ngModel)]="bookIsbn" /> <br />
+
+<button class="btn-floating" (click)="remove(books.id)">Remove</button>
+<button class="btn-floating" (click)="update(books.id)">Update</button>

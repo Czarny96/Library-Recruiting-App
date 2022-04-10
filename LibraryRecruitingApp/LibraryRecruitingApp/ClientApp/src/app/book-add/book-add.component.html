@@ -1,0 +1,5 @@
+<h3>Add new book</h3>
+<span class="description">Title: </span><input type="text" [(ngModel)]="bookTitle" placeholder="Harry Potter"/><br />
+<span class="description">ISBN number: </span><input type="number" [(ngModel)]="bookIsbn" placeholder="123456789"/>
+<br />
+<button class="btn-floating" (click)="add()">Add</button>

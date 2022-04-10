@@ -1,0 +1,23 @@
+<h1 id="tableLabel">Books List</h1>
+
+<p *ngIf="!books"><em>Loading...</em></p>
+
+<input class="col s8" type="text" placeholder="Search" (keyup)="searchMetchod($event)" />
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="books">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Title</th>
+      <th>ISBN</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr (click)="onSelect(book.id)" *ngFor="let book of books">
+      <td>{{ book.id }}</td>
+      <td>{{ book.title }}</td>
+      <td>{{ book.isbn}}</td>
+    </tr>
+  </tbody>
+
+</table>
